@@ -10,6 +10,7 @@ RUN cd ~ && \
     stack build && \
     cd .. && \
     rm -fR tmp && \
+    sh <(curl -L https://nixos.org/nix/install) --daemon && \
     cd /
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD [ "node" ]
