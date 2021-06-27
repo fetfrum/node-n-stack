@@ -10,5 +10,6 @@ RUN cd ~ && \
     stack build && \
     cd .. && \
     rm -fR tmp && \
+    cd /
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD [ "node" ]
