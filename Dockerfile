@@ -10,7 +10,7 @@ RUN cd ~ && \
     cd tmp && \
     stack build && \
     cd .. && \
-    rm -fR tmp
-
+    rm -fR tmp && \
+    chown node:node -hR .stack-work
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD [ "node" ]
